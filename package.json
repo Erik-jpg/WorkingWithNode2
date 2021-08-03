@@ -1,0 +1,26 @@
+{
+  "name": "workingwithnode2",
+  "version": "1.0.0",
+  "description": "This is a simple repository to work with node.js, express.js, MySQL2, Sequelize.js and many other fun things.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erik-jpg/WorkingWithNode2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erik-jpg/WorkingWithNode2/issues"
+  },
+  "homepage": "https://github.com/Erik-jpg/WorkingWithNode2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.6.5"
+  }
+}
