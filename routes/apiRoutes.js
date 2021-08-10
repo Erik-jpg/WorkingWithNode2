@@ -13,9 +13,8 @@ router.post('/users', async (req, res) => {
 })
 
 router.get('/users/sign-in/:username', async (req, res) => {
-    const user = await User.findOne({ where: { username: req.params.username }});
-    console.log(user);
-    const validated = await user.validate(req.body.password);
+    const user = await User.findOne({ where: { username: req.params.username }});    
+    const validated = await user.validatePassword(req.body.password);
     res.json(validated);
 })
 module.exports = router;

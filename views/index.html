@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="userName" placeholder="Username"></input>
+    <input id="password" placeholder="Password"></input>
+    <button class="submitBtn">Submit</button>
+    <script>
+        const userName = document.getElementById('userName');
+const password = document.getElementById('password');
+const submitBtn = document.getElementById('submitBtn');
+
+submitBtn.addEventListener('click', (event) => {
+    const body ={
+        userName: userName.value,
+        password: password.value,
+    };
+    console.log('body is:', body);
+    fetch('/api/Users', {
+        method: 'POST',
+        header: {
+            'Content-type': 'application/json',
+        },
+        body: JSON.stringify(body),
+    }).then((response) => response.json)
+    .then((result) => console.log(result));
+})
+    </script>
+</body>
+</html>
