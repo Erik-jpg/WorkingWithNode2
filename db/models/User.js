@@ -17,7 +17,6 @@ User.init(
 );
 
 User.addHook('beforeCreate', async (user) => {
-    console.log('inside create', user);
     user.password = await bcrypt.hash(user.dataValues.password, 10);
     return user;
 })
